@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;    
+}
+#app{
+    width: 1000px;
+}
+h1::selection{
+    color: #3e8e41;
+    background-color: white;
+}
+.action {
+    display: flex;
+    align-items: center;
+}
+h1 {
+    color: #4CAF50;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 58px;
+    margin: 20px;
+}
+
+
+
+/* --- TASKLIST ---------------------------------------------------- */
+.task-list {
+    background-color: #333333;
+    color: #ffffff;
+}
+.task{
+    display: flex;
+    border: 1px solid #494949;
+    padding: 16px;
+    font-size: 16px;
+}
+.task ::selection{
+    color: black;
+    background-color: #3e8e41;
+}
+.task :nth-child(2){
+    margin-left: 15px;
+    width: 100%;
+}
+.task :nth-child(1):hover{
+    color: #4CAF50;;
+}
+.task :nth-child(3){
+    margin-right: 8px;
+    margin-left: 8px;
+    color: #d7ba7d;
+}
+.task :nth-child(3):hover{
+    color: #f5c45b;
+}
+.task :nth-child(4){
+    color: rgb(180, 180, 180);
+}
+.task :nth-child(4):hover{
+    color: rgb(238, 111, 111);
+}
+.priority{
+    color: #d7ba7d;
+    border: 1px solid #d7ba7d;
+    background-color: #40413c;;
+}
+.priority :nth-child(2){
+    text-decoration: underline;
+}
+.completed {
+    color: #4CAF50;
+    border: 1px solid #3e8e41;
+    background-color: #2e3530;;
+}
+.completed :nth-child(2){
+    text-decoration: line-through;
+}
+#start-message{
+   padding: 20px;
+}
+
+
+
+/* --- DROPDOWN ---------------------------------------------------- */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+/* --- INPUT + BTN ------------------------------------------------- */
+#task-input {
+    height: 50px;
+    width: 400px;
+    background-color: rgb(242, 255, 242); 
+    border: none;
+    margin-left: 20px;
+    margin-right: 3px;
+    padding-left: 20px;
+}
+#add-task-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+#add-task-btn:hover {background-color: #3e8e41;}
+
+
+
+@media(max-width: 800px) {
+    #task-input{
+        width: 300px;
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+}
+@media(max-width: 650px){
+    #task-input{
+        width: 200px;
+    }
+}
+@media(max-width: 550px){
+    #task-input{
+        margin-left: 20px;
+        width: 300px;
+    }
+    .action {
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 380px){
+    #task-input{
+        width: 150px;
+    }
+}
+@media(max-width: 285px){
+    .action {
+        flex-direction: column;
+        padding: 20px;
+    }
+    #task-input{
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do list</title>
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/task-ico.png">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <div class="action">
+      <div>
+        <h1>TO DO</h1>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Show ...</button>
+        <div class="dropdown-content">
+          <a id="show-all-tasks" href="#">All</a>
+          <a id="show-completed-tasks" href="#">Completed</a>
+          <a id="show-not-completed-tasks" href="#">Not completed</a>
+          <a id="show-important" href="#">Important</a>
+          <a id="show-not-important" href="#">Not important</a>
+          <a id="delete-all-btn" href="#">Delete all</a>
+        </div>
+      </div>
+      <input type="text" placeholder="type some text..." id="task-input"
+        title="Enter the description of your task in this field">
+      <button id="add-task-btn" title="Type some text and click this button to add a new task">+</button>
+    </div>
+
+    <div class="task-list">
+      <p id="start-message">No tasks ...</p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
