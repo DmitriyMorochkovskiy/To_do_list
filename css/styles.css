@@ -42,23 +42,26 @@ h1 {
     color: black;
     background-color: #3e8e41;
 }
-.task :nth-child(2){
+.task :nth-child(2){ /*Text field*/
     margin-left: 15px;
     width: 100%;
 }
-.task :nth-child(1):hover{
-    color: #4CAF50;;
+.task :nth-child(1):hover{ /*"Is done" button*/
+    color: #4CAF50;
+    cursor: pointer;
 }
-.task :nth-child(3){
+.task :nth-child(3){ /*"Change priority" button*/
     margin-right: 8px;
     margin-left: 8px;
     color: #d7ba7d;
+    cursor: pointer;
 }
 .task :nth-child(3):hover{
     color: #f5c45b;
 }
-.task :nth-child(4){
+.task :nth-child(4){ /*"Delete" button*/
     color: rgb(180, 180, 180);
+    cursor: pointer;
 }
 .task :nth-child(4):hover{
     color: rgb(238, 111, 111);
@@ -66,7 +69,7 @@ h1 {
 .priority{
     color: #d7ba7d;
     border: 1px solid #d7ba7d;
-    background-color: #40413c;;
+    background-color: #40413c;
 }
 .priority :nth-child(2){
     text-decoration: underline;
@@ -74,12 +77,12 @@ h1 {
 .completed {
     color: #4CAF50;
     border: 1px solid #3e8e41;
-    background-color: #2e3530;;
+    background-color: #2e3530;
 }
 .completed :nth-child(2){
     text-decoration: line-through;
 }
-#start-message{
+#no-tasts-message{
    padding: 20px;
 }
 
@@ -111,9 +114,15 @@ h1 {
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 
 
@@ -133,12 +142,28 @@ h1 {
     border: none;
     height: 50px;
     width: 50px;
+    cursor: pointer;
 }
-#add-task-btn:hover {background-color: #3e8e41;}
+#delete-all-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    height: 50px;
+    margin-left: 20px;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#add-task-btn:hover {
+    background-color: #3e8e41;
+}
+#delete-all-button:hover {
+    background-color: #3e8e41;
+}
 
 
 
-@media(max-width: 800px) {
+@media(max-width: 900px) {
     #task-input{
         width: 300px;
         margin-left: 0px;
@@ -147,12 +172,12 @@ h1 {
     }
     
 }
-@media(max-width: 650px){
+@media(max-width: 780px){
     #task-input{
         width: 200px;
     }
 }
-@media(max-width: 550px){
+@media(max-width: 670px){
     #task-input{
         margin-left: 20px;
         width: 300px;
@@ -173,5 +198,9 @@ h1 {
     }
     #task-input{
         margin-left: 0px;
+    }
+    #delete-all-button{
+        margin-left: 0px;
+        margin-top: 20px;
     }
 }
